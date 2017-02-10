@@ -9,13 +9,15 @@
 import UIKit
 
 class PhotoDetailsViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
 
+ 
     var photoURL : URL!
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.setImageWith(photoURL)
         // Do any additional setup after loading the view.
     }
 

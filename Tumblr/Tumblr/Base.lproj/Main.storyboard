@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="334"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfw-8N-Y6d" id="xhn-4Z-C7b">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="333"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="333.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ZDU-2k-GDc">
@@ -71,6 +71,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="uYs-K0-ahj"/>
+                    <connections>
+                        <outlet property="imageView" destination="51D-NK-yjb" id="Q02-3M-RRy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xex-Wb-Ls5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

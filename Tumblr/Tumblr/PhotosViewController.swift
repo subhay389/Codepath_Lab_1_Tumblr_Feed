@@ -61,11 +61,9 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
         let post = posts[indexPath.row]
-        let photos = post.value(forKeyPath: "photos") as? [NSDictionary]
         
         if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
             let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
-            let imageUrl = URL(string: imageUrlString!)!
             if let imageUrl = URL(string: imageUrlString!) {
                  cell.UITableViewCell.setImageWith(imageUrl)
             } else {
@@ -83,9 +81,13 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated:true)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! PhotoDetailsViewController
+        let vc = segue.destination as! PhotoDetailsViewController
         
         let cell = sender as! UITableViewCell
         
