@@ -15,11 +15,9 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 240;
@@ -59,16 +57,15 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         return posts.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! PhotoCell
-
-        //cell.textLabel?.text = "This is row \(indexPath.row)"
-
         let post = posts[indexPath.row]
-         let photos = post.value(forKeyPath: "photos") as? [NSDictionary]
+        let photos = post.value(forKeyPath: "photos") as? [NSDictionary]
+        
         if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
             let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
-             let imageUrl = URL(string: imageUrlString!)!
+            let imageUrl = URL(string: imageUrlString!)!
             if let imageUrl = URL(string: imageUrlString!) {
                  cell.UITableViewCell.setImageWith(imageUrl)
             } else {
@@ -80,10 +77,36 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! PhotoDetailsViewController
+        
+        let cell = sender as! UITableViewCell
+        
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let post = posts[indexPath.row]
+        
+        if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
+            let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
+            if let imageUrl = URL(string: imageUrlString!) {
+                vc.photoURL = imageUrl
+            }
+            else {
+                // URL(string: imageUrlString!) is nil. Good thing we didn't try to unwrap it!
+                print("ImageURLString is nill: \(imageUrlString)")
+            }
+        
+        
+        
+        
+    }
+    
+    }
 }

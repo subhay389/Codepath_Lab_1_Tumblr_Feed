@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278B7B051E4E046700C6CE99 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */; };
 		27BB14361E44063300CD75EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB14351E44063300CD75EE /* AppDelegate.swift */; };
 		27BB143B1E44063300CD75EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB14391E44063300CD75EE /* Main.storyboard */; };
 		27BB143D1E44063300CD75EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27BB143C1E44063300CD75EE /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		27BB14321E44063300CD75EE /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BB14351E44063300CD75EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27BB143A1E44063300CD75EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				27BB143C1E44063300CD75EE /* Assets.xcassets */,
 				27BB143E1E44063300CD75EE /* LaunchScreen.storyboard */,
 				27BB14411E44063400CD75EE /* Info.plist */,
+				278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */,
 			);
 			path = Tumblr;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278B7B051E4E046700C6CE99 /* PhotoDetailsViewController.swift in Sources */,
 				27BB14361E44063300CD75EE /* AppDelegate.swift in Sources */,
 				27BB144A1E440C8E00CD75EE /* PhotoCell.swift in Sources */,
 				27BB14481E44091000CD75EE /* PhotosViewController.swift in Sources */,
