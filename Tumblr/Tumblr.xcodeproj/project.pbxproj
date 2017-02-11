@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27388C471E4E83D700DD1DAB /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27388C461E4E83D700DD1DAB /* InfiniteScrollActivityView.swift */; };
 		278B7B051E4E046700C6CE99 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */; };
 		27BB14361E44063300CD75EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BB14351E44063300CD75EE /* AppDelegate.swift */; };
 		27BB143B1E44063300CD75EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BB14391E44063300CD75EE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27388C461E4E83D700DD1DAB /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		27BB14321E44063300CD75EE /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BB14351E44063300CD75EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				27BB143E1E44063300CD75EE /* LaunchScreen.storyboard */,
 				27BB14411E44063400CD75EE /* Info.plist */,
 				278B7B041E4E046700C6CE99 /* PhotoDetailsViewController.swift */,
+				27388C461E4E83D700DD1DAB /* InfiniteScrollActivityView.swift */,
 			);
 			path = Tumblr;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27388C471E4E83D700DD1DAB /* InfiniteScrollActivityView.swift in Sources */,
 				278B7B051E4E046700C6CE99 /* PhotoDetailsViewController.swift in Sources */,
 				27BB14361E44063300CD75EE /* AppDelegate.swift in Sources */,
 				27BB144A1E440C8E00CD75EE /* PhotoCell.swift in Sources */,
